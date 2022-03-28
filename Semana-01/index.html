@@ -8,42 +8,139 @@
 </head>
 <body>
     <header>
-        <div><img src="logo" alt="assets/images/logo.svg"></div>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-          <li><a href="#home">home</a></li>
-          <li><a href="#signup">signup</a></li>
-          <li><a href="#login">login</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-    </header>
+        <!--Header: search bar-->
+        <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search" name="search">
+              <button type="submit"><img src="assets/icons/Search.png" alt="Search-button"></button>
+            </form>
+          </div>
 
-    <section class="intro">
-        <div class="container">
-            <h1>Te future of Remote Work</h1>
-            <div class="text">
-                <p>El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
+        <!--Header: menu, logo, options-->
+        <nav>
+            <div>
+                <img src="assets/icons/MenuButton.png" alt="Menu-button">
+                <img src="assets/icons/Logo.svg" alt="Logo-Trackgenix">
             </div>
-            <a class="action-button" href="#learnmore">LEARN MORE</a> 
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Signup</a>
+                <a href="#">Login</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <!--Section: Intro-->
+    <section>
+        <div>
+            <h1>Te future of Remote Work</h1>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                    bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                    i ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <button href="">LEARN MORE</button>
         </div>
-        <div><img src="img-intro" alt=""></div>
+        <div><img src="assets/images/intro-img.png" alt=""></div>
     </section>
 
-    <section class="functions" id="functions">
+    <!--Section: Functions-->
+    <section>
         <h2>Functions</h2>
-        <div class="img-functions">
+        <div>
             <div>
-                <img src="assets/images/icon1.svg" alt="x" />
+                <img src="assets/icons/Functions1.png" alt="Functions-Timekeeping">
                 <h3>Timekeeping</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
                     bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
-                    i ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess
-                    e cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in c
-                    ulpa qui officia deserunt mollit anim id est laborum.</h4>
+                    i ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div>
+                <img src="assets/icons/Functions2.png" alt="Functions-Resource-management">
+                <h3>Resource management</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                    bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                    i ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div>
+                <img src="assets/icons/Functions3.png" alt="Functions-Reports">
+                <h3>Reports</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                    bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                    i ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div>
+                <img src="assets/icons/Functions4.png" alt="Functions-Multiple-roles">
+                <h3>Multiple roles</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                    bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                    i ut aliquip ex ea commodo consequat.
+                </p>
             </div>
             
         </div>
+    </section>
+
+    <!--Section: Assets-->
+    <section>
+        <h2>Assets</h2>
+        <div>
+            <img src="assets/images/Assets1.jpg" alt="">
+            <h3>Traceability</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                i ut aliquip ex ea commodo consequat.
+            </p>
+            <button type="submit">More</button>
+        </div>
+        <div>
+            <img src="assets/images/Assets2.jpg" alt="Functions-Multiple-roles">
+            <h3>Decision making</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                i ut aliquip ex ea commodo consequat.
+            </p>
+            <button type="submit">More</button>
+        </div>
+        <div>
+            <img src="assets/images/Assets2.jpg" alt="Functions-Multiple-roles">
+            <h3>Equipment management</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                i ut aliquip ex ea commodo consequat.
+            </p>
+            <button type="submit">More</button>
+        </div>
+        <div>
+            <img src="assets/images/Assets2.jpg" alt="Functions-Multiple-roles">
+            <h3>Efficiency</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis
+                i ut aliquip ex ea commodo consequat.
+            </p>
+            <button type="submit">More</button>
+        </div>
+    </section>
+
+    <!--Section: Form-->
+    <section>
+        <h2>Form</h2>
+        
     </section>
 
 </body>
