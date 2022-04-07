@@ -1,0 +1,32 @@
+header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    background-color: #AACE9B;
+}
+
+.menu-btn img {
+    margin: 30px;
+    width: 40px;
+}
+
+.logo {
+    margin-right: 30px;
+    width: 30%;
+}
+
+.nav-bar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    
+    .nav-bar {
+        display: block;
+        float: left;
+    }
+
+    .nav-bar ul {
+        display: flex;
+    }
+}
