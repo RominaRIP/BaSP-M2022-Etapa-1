@@ -1,28 +1,48 @@
 header {
-    position: sticky;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     background-color: #AACE9B;
 }
 
-.menu-btn img {
-    margin: 30px;
-    width: 40px;
+.menu-mobile {
+    display: flex;
+    align-items: center;
+
 }
 
-.logo {
-    margin-right: 30px;
-    width: 30%;
+.menu-btn img {
+    margin: 20px;
+    width: 30px;
+}
+
+.logo img {
+    width: 50%;
 }
 
 .nav-bar {
     display: none;
 }
 
+aside {
+    display: none;
+}
+
 @media (min-width: 768px) {
+    header {
+        height: 80px;
+    }
+
+    .menu-btn img {
+        margin: 30px;
+        width: 50px;
+    }
+
+    .logo {
+        width: 300px;
+    }
     
     .nav-bar {
-        display: block;
+        display: flex;
         float: left;
     }
 

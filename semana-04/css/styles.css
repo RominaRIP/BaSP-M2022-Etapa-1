@@ -1,0 +1,334 @@
+main {
+    width: 80%;
+    text-align: center;
+}
+
+section.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 3px #C4C4C4 solid; 
+}
+
+.intro .article h1 {
+    width: 330px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #C4C4C4;
+    font-size: 50px;
+}
+
+.intro .article p {
+    max-width: 450px;
+    margin-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.intro button {
+    width: 220px;
+    margin-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px #AACE9B solid;
+    border-radius: 80px;
+    background-color: #FFF;
+    color: #000;
+}
+
+.intro div img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+
+/* Section: Functions */
+
+section.functions {
+    border-bottom: 3px #C4C4C4 solid; 
+}
+
+.functions h2 {
+    width: 209px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000;
+    padding: 20px;
+    border-bottom: 6px #AACE9B solid;
+}
+
+.functions .div-functions {
+    margin: 30px;
+}
+
+.functions .div-functions h3 {
+    margin: 30px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000;
+}
+
+.functions .div-functions p {
+    width: 250px;
+    padding: 10px;
+    letter-spacing: 5%;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #000;
+}
+
+/* Section: Assets */
+
+section.assets {
+    border-bottom: 3px #C4C4C4 solid; 
+}
+
+.assets h2 {
+    width: 209px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000;
+    padding: 20px;
+    border-bottom: 6px #AACE9B solid;
+}
+
+.assets div {
+    position: static;
+    display: inline-block;
+    width: 40%;
+    padding: 30px;
+}
+
+.assets div img {
+    width: 430px;
+    height: 310px;
+    border-radius: 23px;
+}
+
+.assets div h3 {
+    padding: 30px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000
+}
+
+.assets div p {
+    width: 400px;
+    padding-left: 30px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #000
+}
+
+.assets div button {
+    width: 95px;
+    padding: 10px;
+    margin: 50px 0 50px 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #AACE9B;
+    color: #000;
+}
+
+/* Section: Form */
+
+section.form {
+    width: 90%;
+    padding: 30px;
+    border-bottom: 3px #C4C4C4 solid; 
+}
+
+.form h2 {
+    width: 209px;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000;
+    border-bottom: 6px #AACE9B solid;
+}
+
+.form div form {
+    margin: 80px;
+}
+
+.form div form div input {
+    position: static;
+    display: inline-block;
+    width: 34.5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px #373867 solid;
+    border-radius: 4px;
+}
+
+.form input {
+    position: static;
+    display: inline;
+    width: 72.5%;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px #373867 solid;
+    border-radius: 4px;
+}
+
+.form textarea {
+    position: static;
+    display: inline;
+    width: 72.5%;
+    height: 200px;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px #373867 solid;
+    border-radius: 4px;
+}
+
+.form form div.form-buttons {
+    position: static;
+    display: block;
+}
+
+.form button[type="submit"] {
+    width: 160px;
+    padding: 5px;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #AACE9B;
+    color: #000;
+}
+
+.form button[type="reset"] {
+    width: 100px;
+    padding: 5px;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px #AACE9B solid;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+/* Section: About us */
+
+section.about-us {
+    width: 90%;
+    padding: 30px;
+    border-bottom: 3px #C4C4C4 solid;
+}
+
+.about-us h2 {
+    width: 209px;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000;
+    border-bottom: 6px #AACE9B solid;
+}
+
+.about-us div {
+    padding: 50px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-us div p {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    letter-spacing: 5%;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.about-us div img {
+    width: 50%;
+    border-radius: 23px;
+    float: right;
+    margin-top: -450px;
+}
+
+/* Section: Lists */
+
+section.lists {
+    padding: 40px;
+    width: 90%;
+    margin-left: 30px;
+}
+
+.lists div {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+}
+
+.lists div h3 {
+    padding: 20px;
+    text-align: center;
+    width: 209px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 33px;
+    color: #000;
+    border-bottom: 6px #AACE9B solid;
+}
+
+.lists div ol {
+    list-style: decimal;
+    margin-top: 30px;
+}
+
+.lists div li {
+    margin-left: 35px;
+    line-height: 55px;
+    letter-spacing: 2px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 33px;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+
+}
+
