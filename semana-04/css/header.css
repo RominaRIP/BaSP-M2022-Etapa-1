@@ -19,13 +19,11 @@ header {
     width: 50%;
 }
 
-.nav-bar {
+.nav-bar ul {
     display: none;
 }
 
-aside {
-    display: none;
-}
+/* Ocultar ul en lugar de nav */
 
 @media (min-width: 768px) {
     header {
@@ -38,15 +36,7 @@ aside {
     }
 
     .logo {
-        width: 300px;
-    }
-    
-    .nav-bar {
-        display: flex;
-        float: left;
-    }
-
-    .nav-bar ul {
-        display: flex;
+        width: 80%;
+        max-width: 500px;
     }
 }
