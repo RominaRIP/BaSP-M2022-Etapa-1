@@ -259,6 +259,6 @@ section.lists {
     color: #000;
 }
 
-@media (min-width: 768px) {
-    
+@media (max-width: 768px) {
+
 }

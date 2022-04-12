@@ -28,3 +28,12 @@ section {
     align-items: center;
     border-bottom: 3px #C4C4C4 solid;
 }
+
+nav li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}

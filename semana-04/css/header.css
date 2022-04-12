@@ -32,11 +32,24 @@ header {
     max-width: 500px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-right: 30px;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
 @media (max-width: 1024px) {
-    .nav-bar ul {
+    nav {
         display: none;
     }
-    
-    /* Ocultar ul en lugar de nav */
-    
 }
