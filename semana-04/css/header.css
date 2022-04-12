@@ -7,7 +7,6 @@ header {
 .menu-mobile {
     display: flex;
     align-items: center;
-
 }
 
 .menu-btn img {
@@ -19,24 +18,25 @@ header {
     width: 50%;
 }
 
-.nav-bar ul {
-    display: none;
+header {
+    height: 80px;
 }
 
-/* Ocultar ul en lugar de nav */
+.menu-btn img {
+    margin: 30px;
+    width: 50px;
+}
 
-@media (min-width: 768px) {
-    header {
-        height: 80px;
-    }
+.logo {
+    width: 80%;
+    max-width: 500px;
+}
 
-    .menu-btn img {
-        margin: 30px;
-        width: 50px;
+@media (max-width: 1024px) {
+    .nav-bar ul {
+        display: none;
     }
-
-    .logo {
-        width: 80%;
-        max-width: 500px;
-    }
+    
+    /* Ocultar ul en lugar de nav */
+    
 }
