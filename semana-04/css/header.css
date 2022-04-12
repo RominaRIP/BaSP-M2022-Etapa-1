@@ -33,7 +33,7 @@ header {
 }
 
 nav {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 40%;
@@ -48,8 +48,17 @@ nav {
     justify-content: space-around;
 }
 
-@media (max-width: 1024px) {
+nav li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (min-width: 1024px) {
     nav {
-        display: none;
+        display: flex;
     }
 }

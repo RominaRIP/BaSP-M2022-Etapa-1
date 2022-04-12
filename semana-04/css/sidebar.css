@@ -1,16 +1,10 @@
-body {
-    display: flex;
-}
-
-.container-right {
-    width: 80%;
-}
-
-aside {
-    display: flex;
+.aside {
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 20%;
+    height: max-content;
+    min-height: 100%;
     background-color: #EDEDED;
 }
 
@@ -108,7 +102,7 @@ div.box-aside ul li a {
 .box-info div {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 20px 0;
     width: 90%;
     border-bottom: 2px #C4C4C4 solid;
@@ -120,7 +114,7 @@ div.box-aside ul li a {
     max-width: 200px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 24px;
 }
 
@@ -129,13 +123,8 @@ div.box-aside ul li a {
     width: 31px;
 }
 
-@media (max-width: 768px) {
-    aside {
-        display: none;
+@media (min-width: 768px) {
+    .aside {
+        display: flex;
     }
-
-    .container-right {
-        width: 100%;
-    }
-
 }
