@@ -13,11 +13,17 @@ Por otro lado, consta de varias secciones en las que se ofrece contenido tanto d
 # Week 03: HTML and CSS: Landing page for "Trackgenix S. A."
 
 (ENG)
-This repository was updated with the addition of the "Week-03" folder, in which errors in the index.hml file (located in the Week-02 folder) were corrected and a CSS file was added to apply styles to the corrected HTML file.
-This is the replica of a static landing page, in which layout tools such as gid or flexbox were not used.
+This repository was updated with the addition of the "Semana-03" folder, in which errors in the index.hml file (located in the "Semana-02" folder) were corrected and a CSS file was added to apply styles to the corrected HTML file.
+This is the replica of a static landing page, in which layout tools such as Grid or Flexbox were not used.
 
 (ESP)
-Este repositorio se actualizó con la adición de la carpeta "Semana-03", en la que se corrigieron errores del archivo index.hml (ubicado en la carpeta Semana-02) y se añadió un archivo en formato CSS para aplicar estilos al archivo HTML corregido.
-Se trata de la réplica de una landing page estática, en la que no se usaron herramientas para el layout como gid o flexbox.
+Este repositorio se actualizó con la adición de la carpeta "Semana-03", en la que se corrigieron errores del archivo index.hml (ubicado en la carpeta "Semana-02") y se añadió un archivo en formato CSS para aplicar estilos al archivo HTML corregido.
+Se trata de la réplica de una landing page estática, en la que no se usaron herramientas para el layout como Grid o Flexbox.
 
 # Week 04: HTML and CSS (Flexbox layout): Landing page for "Trackgenix S. A."
+
+(ENG)
+This repository now has a folder called "semana-04" that contains style sheets for each section of the HTML file. The design corresponds to the same landing page as the previous weeks, but this time Flexbox was used as a layout tool.
+
+(ESP)
+Este repositorio ahora posee una carpeta llamada "semana-04" que contiene hojas de estilos para cada sección del archivo HTML. El diseño corresponde a la misma landing page que las semanas anteriores, pero en esta oportunidad se utilizó Flexbox como herramienta para el layout.
