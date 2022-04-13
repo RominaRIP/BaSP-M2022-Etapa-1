@@ -22,6 +22,11 @@ div.container-icons a {
     width: 10%;
 }
 
+div.container-icons a:hover {
+    transform: rotate(15deg);
+    transition: all 0.5s ease;
+}
+
 .container-data {
     display: flex;
     flex-direction: column;

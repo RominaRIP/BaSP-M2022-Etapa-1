@@ -57,6 +57,11 @@ nav li a {
     color: #000;
 }
 
+nav li a:hover {
+    color: #FFF;
+    font-weight: 600;
+}
+
 @media (min-width: 1024px) {
     nav {
         display: flex;

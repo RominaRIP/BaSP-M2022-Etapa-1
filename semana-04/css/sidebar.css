@@ -8,8 +8,6 @@
     background-color: #EDEDED;
 }
 
-/* Search bar */
-
 .search-bar {
     display: flex;
     justify-content: center;
@@ -38,8 +36,6 @@
     font-size: 13px;
     padding: 8px;
 }
-
-/* Side menu */
 
 .box-aside {
     display: flex;
@@ -80,6 +76,10 @@ div.box-aside ul li a {
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+div.box-aside ul li a:hover {
+    font-weight: 600;
 }
 
 .box-aside div p.touch-text {

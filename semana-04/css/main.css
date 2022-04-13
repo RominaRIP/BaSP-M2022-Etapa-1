@@ -41,13 +41,16 @@ main {
     color: #000;
 }
 
+.intro button:hover {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
 .intro div img {
     width: 100%;
     max-width: 800px;
     margin-bottom: 80px;
 }
-
-/* Section: Functions */
 
 .functions .div-functions div {
     display: flex;
@@ -80,8 +83,6 @@ main {
     font-size: 15px;
     color: #000;
 }
-
-/* Section: Assets */
 
 .assets div {
     display: flex;
@@ -129,7 +130,11 @@ main {
     color: #000;
 }
 
-/* Section: Form */
+.assets div button:hover {
+    background-color: #809B75;
+    color: #FFF;
+    font-weight: 600;
+}
 
 .form div {
     display: flex;
@@ -190,6 +195,12 @@ form {
     color: #000;
 }
 
+.form button[type="submit"]:hover {
+    background-color: #809B75;
+    color: #FFF;
+    font-weight: 600;
+}
+
 .form button[type="reset"] {
     width: 100px;
     padding: 5px;
@@ -205,7 +216,10 @@ form {
     color: #000;
 }
 
-/* Section: About us */
+.form button[type="reset"]:hover {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
 
 .about-us div {
     display: flex;
@@ -227,8 +241,6 @@ form {
     width: 260px;
     border-radius: 23px;
 }
-
-/* Section: Lists */
 
 section.lists {
     border-bottom: none;
@@ -266,7 +278,15 @@ section.lists {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 33px;
+}
+
+.lists div li a {
+    text-decoration: none;
     color: #000;
+}
+
+.lists div li a:hover {
+    font-weight: 500;
 }
 
 @media (min-width: 768px) {
