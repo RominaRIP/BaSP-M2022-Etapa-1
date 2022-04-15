@@ -27,3 +27,11 @@ This repository now has a folder called "semana-04" that contains style sheets f
 
 (ESP)
 Este repositorio ahora posee una carpeta llamada "semana-04" que contiene hojas de estilos para cada sección del archivo HTML. El diseño corresponde a la misma landing page que las semanas anteriores, pero en esta oportunidad se utilizó Flexbox como herramienta para el layout.
+
+# Week 05: Excercises in Javascript
+
+(ENG)
+The "semana-05" folder corresponds to a series of Javascript practice exercises. They are divided into five files, contained in the "excercises" folder, on the following topics: variables and operators, strings, arrays, if/else, for and functions.
+
+(ESP)
+La carpeta "semana-05" corresponde a una serie de ejercicios de práctica en Javascript. Los mismos se dividen en cinco archivos, contenidos en la carpeta "excercises", sobre temas de: variables y operadores, strings, arrays, if/else, for y functions.
