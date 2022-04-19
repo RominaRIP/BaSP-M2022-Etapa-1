@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 20%;
+    min-width: 150px;
     height: max-content;
     min-height: 100%;
     background-color: #EDEDED;
@@ -32,7 +33,6 @@
 }
 
 .search-bar form input[type="text"] {
-    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     padding: 8px;
 }
@@ -45,7 +45,6 @@
 }
 
 .box-aside p.title {
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 31px;
     padding: 10px 0;
@@ -70,7 +69,6 @@ div.box-aside ul li {
 }
 
 div.box-aside ul li a {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 17px;
     color: #000;
@@ -85,7 +83,6 @@ div.box-aside ul li a:hover {
 .box-aside div p.touch-text {
     width: 80%;
     margin: 20px 0;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     line-height: 24px;
@@ -112,10 +109,13 @@ div.box-aside ul li a:hover {
     margin: 30px 0;
     width: 60%;
     max-width: 200px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 12px;
     line-height: 24px;
+}
+
+.box-info .p-break {
+    word-break: break-all;
 }
 
 .box-info div img {

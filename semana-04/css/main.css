@@ -8,6 +8,17 @@ main {
     background-color: #FFF;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px #C4C4C4 solid;
+}
+
+form {
+    width: 100%;
+}
+
 .intro {
     display: flex;
     align-content: center;
@@ -22,7 +33,6 @@ main {
 
 .intro .article p {
     max-width: 450px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 24px;
 }
@@ -30,7 +40,6 @@ main {
 .intro button {
     width: 220px;
     margin: 80px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-transform: uppercase;
@@ -62,7 +71,6 @@ main {
 .functions .div-functions h3 {
     letter-spacing: 5%;
     margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
     color: #000;
@@ -78,7 +86,6 @@ main {
     max-width: 250px;
     letter-spacing: 5%;
     line-height: 24px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     color: #000;
@@ -99,7 +106,6 @@ main {
 .assets div h3 {
     margin: 30px 0;
     letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
     color: #000
@@ -110,7 +116,6 @@ main {
     max-width: 400px;
     letter-spacing: 5%;
     line-height: 24px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     color: #000
@@ -120,7 +125,6 @@ main {
     width: 95px;
     padding: 10px;
     margin: 50px 0;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     text-transform: uppercase;
@@ -143,12 +147,7 @@ main {
     width: 100%;
 }
 
-form {
-    width: 100%;
-}
-
 .form div form input {
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     padding: 5px;
     border: 1px #373867 solid;
@@ -159,7 +158,6 @@ form {
     box-sizing: border-box;
     width: 100%;
     margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     padding: 5px;
     border: 1px #373867 solid;
@@ -173,7 +171,6 @@ form {
     width: 100%;
     height: 200px;
     margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     padding: 5px;
     border: 1px #373867 solid;
@@ -185,7 +182,6 @@ form {
     width: 160px;
     padding: 5px;
     margin: 30px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     text-transform: uppercase;
@@ -205,7 +201,6 @@ form {
     width: 100px;
     padding: 5px;
     margin: 30px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     text-transform: uppercase;
@@ -229,7 +224,6 @@ form {
 }
 
 .about-us div p {
-    font-family: 'Roboto', sans-serif;
     line-height: 35px;
     letter-spacing: 5%;
     font-weight: bold;
@@ -244,6 +238,7 @@ form {
 
 section.lists {
     border-bottom: none;
+    width: 100%;
 }
 
 .lists div {
@@ -251,16 +246,16 @@ section.lists {
     flex-direction: column;
     align-content: flex-start;
     margin: 30px 0;
+    width: 30%;
 }
 
 .lists div h3 {
-    padding: 20px;
-    text-align: center;
-    width: 209px;
+    padding: 15px;
+    margin: auto;
+    width: 150px;
     letter-spacing: 2px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 33px;
+    font-size: 28px;
     color: #000;
     border-bottom: 6px #AACE9B solid;
 }
@@ -271,13 +266,11 @@ section.lists {
 }
 
 .lists div li {
-    margin-left: 35px;
     line-height: 55px;
     letter-spacing: 2px;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
     font-weight: 300;
-    font-size: 33px;
+    font-size: 28px;
 }
 
 .lists div li a {
@@ -343,13 +336,15 @@ section.lists {
     }
 
     .lists {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+        flex-wrap: wrap;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
+    form input {
+        max-width: 49.5%;
+    }
+    
     .functions .div-functions {
         flex-wrap: nowrap;
         width: 45%;
@@ -384,11 +379,13 @@ section.lists {
         flex-direction: row;
     }
 
-    form input {
-        max-width: 49.5%;
-    }
-
     .about-us img {
         min-width: 50%;
     }
+
+    .lists {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
 }

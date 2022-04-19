@@ -2,6 +2,28 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #AACE9B;
+    height: 80px;
+}
+
+nav {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-right: 30px;
+}
+
+nav li a {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+
+nav li a:hover {
+    color: #FFF;
+    font-weight: 600;
 }
 
 .menu-mobile {
@@ -18,10 +40,6 @@ header {
     width: 50%;
 }
 
-header {
-    height: 80px;
-}
-
 .menu-btn img {
     margin: 30px;
     width: 50px;
@@ -32,34 +50,12 @@ header {
     max-width: 500px;
 }
 
-nav {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    margin-right: 30px;
-}
-
 .nav-bar ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
-}
-
-nav li a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-}
-
-nav li a:hover {
-    color: #FFF;
-    font-weight: 600;
 }
 
 @media (min-width: 1024px) {
