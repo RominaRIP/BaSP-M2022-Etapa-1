@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    font-size: 12px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px #373867 solid;
+    border-radius: 4px;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #000;
+}
+
+button[type="submit"] {
+    background-color: #AACE9B;
+}
+
+button[type="submit"]:hover {
+    background-color: #809B75;
+    color: #FFF;
+    font-weight: 600;
+}
+
+button[type="reset"] {
+    border: 2px #AACE9B solid;
+    background-color: #FFFFFF;
+}
+
+button[type="reset"]:hover {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+label {
+    font-size: 15px;
+}
+
+a {
+    margin: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    align-self: center;
+    width: 50%;
+    height: 450px;
+    background-color: #F6F9F4;
+    border-radius: 20px;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inputs, .buttons-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
