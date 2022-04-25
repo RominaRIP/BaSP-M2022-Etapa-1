@@ -1,19 +1,18 @@
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-}
-
 h2 {
-    text-align: center;
+    font-family: 'Righteous', cursive;
+    width: auto;
+    border-bottom: 5px #AACE9B solid;
 }
 
 input {
     font-size: 12px;
     padding: 5px;
-    margin: 10px;
     border: 1px #373867 solid;
     border-radius: 4px;
+}
+
+.checkbox {
+    margin: 10px;
 }
 
 button {
@@ -49,7 +48,8 @@ button[type="reset"]:hover {
 }
 
 label {
-    font-size: 15px;
+    font-size: 13px;
+    margin-top: 15px;
 }
 
 a {
@@ -64,12 +64,22 @@ a:hover {
     text-decoration: underline;
 }
 
-.container {
-    align-self: center;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
     width: 50%;
-    height: 450px;
+    height: 500px;
     background-color: #F6F9F4;
     border-radius: 20px;
+    border: 0.5px #373867 solid;
 }
 
 .input-label {
@@ -84,3 +94,22 @@ a:hover {
     align-items: center;
 }
 
+.hidden-message {
+    display: none;
+}
+
+.valid-field {
+    display: flex;
+    color: #40FF00;
+    font-size: 10px;
+}
+
+.invalid-field {
+    display: flex;
+    color: #FF0000;
+    font-size: 10px;
+}
+
+.data-fields {
+    
+}
