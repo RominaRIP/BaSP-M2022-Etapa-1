@@ -27,26 +27,6 @@ button {
     color: #000;
 }
 
-button[type="submit"] {
-    background-color: #AACE9B;
-}
-
-button[type="submit"]:hover {
-    background-color: #809B75;
-    color: #FFF;
-    font-weight: 600;
-}
-
-button[type="reset"] {
-    border: 2px #AACE9B solid;
-    background-color: #FFFFFF;
-}
-
-button[type="reset"]:hover {
-    background-color: #f0f0f0;
-    font-weight: 600;
-}
-
 label {
     font-size: 13px;
     margin-top: 15px;
@@ -94,22 +74,46 @@ main {
     align-items: center;
 }
 
+.btn-login {
+    background-color: #AACE9B;
+}
+
+.btn-login:hover {
+    background-color: #809B75;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.btn-signup {
+    border: 2px #AACE9B solid;
+    background-color: #FFFFFF;
+}
+
+.btn-signup:hover {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
 .hidden-message {
     display: none;
 }
 
 .valid-field {
     display: flex;
-    color: #40FF00;
+    color: #3cb414;
     font-size: 10px;
+    font-weight: 600;
+    margin-top: 3px;
 }
 
 .invalid-field {
     display: flex;
     color: #FF0000;
     font-size: 10px;
+    font-weight: 600;
+    margin-top: 3px;
 }
 
-.data-fields {
-    
+.form-data {
+    display: none;
 }

@@ -75,32 +75,24 @@
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./sign-up.html">SignUp</a></li>
                         <li><a href="./login.html">LogIn</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
             </header>
             <main>
                 <div class="container-login">
                     <h2><span><</span>TRACKGENIX<span>></span></h2>
-                    <form action="/login.php">
+                    <form action="#" onsubmit=showValues()>
                         <div class="inputs">
                             <div class="input-label">
                                 <label for="email">E-mail</label>
-                                <input type="email" id="email" name="mail" placeholder="address@mail.xyz" required>
-                                <div class="message-container"></div>
-                                <!-- <div class="message-container">
-                                    <p class="valid-field">Correct</p>
-                                    <p class="invalid-field">This is not a valid email</p>
-                                </div> -->
+                                <input type="email" id="email" name="email" placeholder="address@mail.xyz" required>
+                                <span class="message-container"></span>
                             </div>
                             <div class="input-label">
                                 <label for="password">Password</label>
                                 <input type="password" id="password" name="password" placeholder="Password" required>
-                                <div class="message-container"></div>
-                                <!-- <div class="message-container">
-                                    <p class="valid-field">Correct</p>
-                                    <p class="invalid-field">Wrong password</p>
-                                </div> -->
+                                <span class="message-container"></span>
                             </div>
                         <div class="checkbox">
                             <input type="checkbox" id="remember-me" name="remember-me" value="Remember">
@@ -108,10 +100,13 @@
                         </div>
                         <div class="buttons-login">
                             <button type="submit" class="btn-login">Log In</button>
-                            <button type="submit" class="btn-signup">Sign Up</button>
+                            <button type="submit" class="btn-signup" href="./sign-up.html">Sign Up</button>
                             <a href="#">I forgot my password</a>
                         </div>
                     </form>
+                </div>
+                <div class="form-data">
+
                 </div>
             </main>
             <footer>
