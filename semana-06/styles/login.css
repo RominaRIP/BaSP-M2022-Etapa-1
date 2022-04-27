@@ -1,7 +1,7 @@
 h2 {
     font-family: 'Righteous', cursive;
-    width: auto;
     border-bottom: 5px #AACE9B solid;
+    width: auto;
 }
 
 h3 {
@@ -62,7 +62,7 @@ main {
     align-items: center;
     margin: 100px 0;
     width: 50%;
-    height: 500px;
+    height: 450px;
     background-color: #F6F9F4;
     border-radius: 20px;
     border: 0.5px #373867 solid;
@@ -120,9 +120,13 @@ main {
     margin-top: 3px;
 }
 
-.form-data {
-    display: none;
-    background-color: #F6F9F4;
-    border-radius: 20px;
-    border: 0.5px #373867 solid;
+@media (max-width: 768px) {
+    h2 {
+        width: fit-content;
+    }
+
+    .container-login {
+        background-color: #FFF;
+        border: none;
+    }
 }

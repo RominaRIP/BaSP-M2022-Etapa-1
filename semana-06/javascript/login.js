@@ -4,7 +4,6 @@ window.onload = function () {
     var messageAlert = document.getElementsByClassName('message-container');
     var validEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     var btnLogin = document.getElementsByClassName('btn-login');
-    var finalMessage = document.getElementsByClassName('form-data');
 
     function validateEmail() {
         if (!emailInput.value.match(validEmail)) {
@@ -42,9 +41,7 @@ window.onload = function () {
 
     function showValues () {
         if (emailInput.value.match(validEmail) && passInput.value.length >= 8) {
-            finalMessage[0].classList.remove('form-data');
-            finalMessage[0].innerHTML +=
-            'Password: ' + passInput.value + 'Email: ' + emailInput.value;
+            alert('E-mail: ' + emailInput.value + '; ' + 'Password: ' + passInput.value)
         } else {
             alert('Your data is not valid');
         }
