@@ -36,6 +36,8 @@ The "semana-05" folder corresponds to a series of Javascript practice exercises.
 (ESP)
 La carpeta "semana-05" corresponde a una serie de ejercicios de práctica en Javascript. Los mismos se dividen en cinco archivos, contenidos en la carpeta "exercises", sobre temas de: variables y operadores, strings, arrays, if/else, for y functions.
 
+([Javascript exercises](https://rominarip.github.io/BaSP-M2022-Etapa-1/semana-05/index.html))
+
 # Week 06: Javascript and DOM work in the landing page for "Trackgenix S. A."
 
 (ENG)
@@ -43,3 +45,5 @@ In this folder we continue the work started in Week 04, adding Javascript functi
 
 (ESP)
 En esta carpeta se continua el trabajo iniciado en la Semana 4, añadiendo funcionalidades con Javascript para las acciones de "Login", "Signup" y "Contact" que se encuentran en el menú listado en la Nav-bar. Para ello, se crearán nuevos archivos de HTML y CSS, correspondientes a las pantallas diseñadas en Figma durante la Semana 1. El objetivo de esta actividad radica en aplicar los conceptos aprendidos sobre Javascript la semana anterior y e introducir el manejo del DOM.
+
+([Trackgenix: login and signup](https://rominarip.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html))

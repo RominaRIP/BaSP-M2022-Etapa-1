@@ -43,9 +43,8 @@ window.onload = function () {
     function showValues () {
         if (emailInput.value.match(validEmail) && passInput.value.length >= 8) {
             finalMessage[0].classList.remove('form-data');
-            finalMessage[0].innerHTML +=  
-            `<li>Password: ${passInput.value}</li>` +
-            `<li>Email: ${emailInput.value}</li>`;
+            finalMessage[0].innerHTML +=
+            'Password: ' + passInput.value + 'Email: ' + emailInput.value;
         } else {
             alert('Your data is not valid');
         }
