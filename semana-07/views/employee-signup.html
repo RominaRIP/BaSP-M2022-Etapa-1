@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trackgenix S. A. - SignUp</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="../styles/header.css">
+        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="../styles/login.css">
+        <link rel="stylesheet" type="text/css" href="../styles/employee-signup.css">
+        <script src="../javascript/employee-signup.js"></script>
+    </head>
+    <body>
+        <div class="aside">
+            <div class="search-bar">
+                <form>
+                    <input type="text" placeholder="Search" name="search">
+                </form>
+            </div>
+            <div class="box-aside">
+                <div class="box-menu">
+                    <div>
+                        <p class="title">Menu</p>
+                    </div>
+                    <ul>
+                        <li><a href="#">homepage</a></li>
+                        <li><a href="#">generic</a></li>
+                        <li><a href="#">submenu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <p class="title">Get in touch</p>
+                    </div>
+                    <p class="touch-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la
+                        bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nis i ut aliquip ex ea commodo consequat. 
+                    </p>
+                </div>
+            </div>
+            <div class="box-info">
+                <div>
+                    <img src="../assets/icons/Email.png">
+                    <p class="p-break">information@untitled.tld</p>
+                </div>
+                <div>
+                    <img src="../assets/icons/Phone.png">
+                    <p>(000) 0000 00000</p>
+                </div>
+                <div>
+                    <img src="../assets/icons/Adress.png">
+                    <p>1234 Somewhere Road #8254 Nashville, TN 00000-0000</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <header>
+                <div class="menu-mobile">
+                    <div class="menu-btn">
+                        <img src="../assets/icons/MenuButton.png" alt="Menu-button">
+                    </div>
+                    <div class="logo">
+                        <img src="../assets/icons/Logo.svg" alt="Logo-Trackgenix">
+                    </div>
+                </div>
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./employee-signup.html">SignUp</a></li>
+                        <li><a href="./login.html">LogIn</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="container-signup">
+                    <h2><span><</span>Sign Up<span>></span></h2>
+                    <form action="#">
+                        <div class="inputs">
+                            <div class="input-label">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="surname">Surname</label>
+                                <input type="text" id="surname" name="surname" placeholder="Your surname" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="dni">DNI</label>
+                                <input type="text" id="dni" name="dni" placeholder="Your DNI" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="birthdate">Birth date</label>
+                                <input type="date" id="birthdate" name="birthdate" placeholder="Your birth date" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="phone">Phone number</label>
+                                <input type="text" id="phone" name="phone" placeholder="+00 000-0000000" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="Your address" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="Your city" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="zipcode">Zip code</label>
+                                <input type="text" id="zipcode" name="zipcode" placeholder="Your zip code" required>
+                                <span class="message-container"></span>
+                            <div class="input-label">
+                                <label for="email">E-mail</label>
+                                <input type="text" id="email" name="email" placeholder="address@mail.xyz" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                                <span class="message-container"></span>
+                            </div>
+                            <div class="input-label">
+                                <label for="password2">Repeat password</label>
+                                <input type="password" id="password2" name="password2" placeholder="Repeat password" 
+                                required>
+                                <span class="message-container"></span>
+                            </div>
+                        <div>
+                            <button class="btn-signup" type="submit">create</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="hidden-info">
+                    <h2>Sign Up info:</h2>
+                    <ul>
+                        <li>Name: <span class="inner-span"></span></li>
+                        <li>Surname: <span class="inner-span"></span></li>
+                        <li>DNI: <span class="inner-span"></span></li>
+                        <li>Birthday: <span class="inner-span"></span></li>
+                        <li>Phone: <span class="inner-span"></span></li>
+                        <li>Address: <span class="inner-span"></span></li>
+                        <li>City: <span class="inner-span"></span></li>
+                        <li>Zip-code: <span class="inner-span"></span></li>
+                        <li>Email: <span class="inner-span"></span></li>
+                        <li>Password: <span class="inner-span"></span></li>
+                        <li>Password 2: <span class="inner-span"></span></li>
+                    </ul>
+                </div>
+            </main>
+            <footer>
+                <div class="container-icons">
+                    <a href="#"><img src="../assets/icons/Twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="../assets/icons/Linkedin.png" alt="Linkedin"></a>
+                    <a href="#"><img src="../assets/icons/Instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../assets/icons/Facebook.png" alt="Facebook"></a>
+                </div>
+                <div class="container-data">
+                    <p>Rosario, Argentina</p>
+                    <p>Copyright © 2022 Trackgenix. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -47,3 +47,13 @@ In this folder we continue the work started in Week 04, adding Javascript functi
 En esta carpeta se continua el trabajo iniciado en la Semana 4, añadiendo funcionalidades con Javascript para las acciones de "Login", "Signup" y "Contact" que se encuentran en el menú listado en la Nav-bar. Para ello, se crearán nuevos archivos de HTML y CSS, correspondientes a las pantallas diseñadas en Figma durante la Semana 1. El objetivo de esta actividad radica en aplicar los conceptos aprendidos sobre Javascript la semana anterior y e introducir el manejo del DOM.
 
 ([Trackgenix: login and signup](https://rominarip.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html))
+
+# Week 07: Javascript and DOM work in the landing page for "Trackgenix S. A."
+
+(ENG)
+In this folder we continue the work started in the previous week. The Login and Signup forms will be extended to send the data filled in them to a web server when pressing the confirmation buttons, by an HTTP call (request) from JavaScript.
+We will use the JavaScript Fetch method, sending the data loaded in the form, and the request should only be executed if all the validations of the form are fulfilled.
+
+(ESP)
+En esta carpeta se continua el trabajo iniciado en la semana anterior. Se extenderán los formularios de Login y Signup para que se envíen los datos cargados en ellos a un servidor web al presionar los botones de confirmación, mediante una llamada (request) HTTP desde JavaScript.
+Se utilizará el método Fetch de Javascript, enviando los datos cargados en el formulario, y la request sólo se debe ejecutar si todas las validaciones del formulario se cumplen.
