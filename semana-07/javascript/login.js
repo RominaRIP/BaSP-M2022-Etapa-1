@@ -4,6 +4,7 @@ window.onload = function () {
     var messageAlert = document.getElementsByClassName('message-container');
     var validEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     var btnLogin = document.getElementsByClassName('btn-login');
+    let form = document.querySelector("form");
 
     function validateEmail() {
         if (!emailInput.value.match(validEmail)) {
@@ -39,11 +40,19 @@ window.onload = function () {
         messageAlert[1].classList.add('message-container');
     };
 
-    function showValues () {
+    /* function showValues () {
         if (emailInput.value.match(validEmail) && passInput.value.length >= 8) {
             alert('E-mail: ' + emailInput.value + '; ' + 'Password: ' + passInput.value)
         } else {
             alert('Your data is not valid');
+        }
+    }; */
+
+    function showValues () {
+        if (emailInput.value.match(validEmail) && passInput.value.length >= 8) {
+            return true
+        } else {
+            return false
         }
     };
 
@@ -51,4 +60,35 @@ window.onload = function () {
         showValues();
         e.preventDefault();
     };
+
+    function encodeQuery(data){
+        var query = data.url
+        for (var d in data.params)
+            query += encodeURIComponent(d) + '=' + encodeURIComponent(data.params[d]) + '&';
+            return query.slice(0, -1)
+    }
+    data = { 
+        url : 'https://basp-m2022-api-rest-server.herokuapp.com/login/',
+        params : {
+            'email':'rose@radiumrocket.com',
+            'password':'BaSP2022'
+        }
+    }
+    queryParam = encodeQuery(data)
+    console.log(queryParam)
+
+    fetch("https://basp-m2022-api-rest-server.herokuapp.com/login")
+        .then(function(response) {
+            if (response.ok){
+                return showValues()
+            } else {
+                throw new Error(response.status);
+            }
+        })
+        .then(data => {
+            alert("Datos: " + data);
+        })
+        .catch(err => {
+            alert("Error: ", err.message)
+        })
 }

@@ -161,7 +161,7 @@ window.onload = function () {
     };
 
     function validateCity() {
-        if (cityInput.value.length >= 5) {
+        if (cityInput.value.length >= 5 && onlyAlpha(cityInput)) {
             messageAlert[6].classList.remove('invalid-field');
             messageAlert[6].classList.add('valid-field');
             messageAlert[6].innerHTML = "Valid";
@@ -232,7 +232,6 @@ window.onload = function () {
     passInput.onblur = function () {
         validatePassword ();
     };
-    
     passInput.onfocus = function() {
         messageAlert[9].classList.add('message-container');
     };
@@ -255,11 +254,6 @@ window.onload = function () {
     passInput2.onfocus = function() {
         messageAlert[10].classList.add('message-container');
     };
-
-        /*     alert('Name: ' + nameInput.value + '; ' + 'Surname: ' + surnameInput.value + '; ' + 'DNI: ' + dniInput.value + 
-                '; ' + 'Birthday: ' + birthdayInput.value + '; ' + 'Phone number: ' + phoneInput.value + '; ' + 'Address: ' + 
-                addressInput.value + '; ' + 'City: ' + cityInput.value + '; ' + 'Zip-code: ' + zipInput.value + '; ' + 
-                'E-mail: ' + emailInput.value + '; ' + 'Password: ' + passInput.value) */
 
     function showValuesSignUp () {
         if (validateName() == true && 
@@ -289,7 +283,6 @@ window.onload = function () {
             alert('error');
         }
     };
-    console.log(validateValue)
     btnSignUp[0].onclick = function (e) {
         e.preventDefault();
         showValuesSignUp();
