@@ -1,12 +1,12 @@
 window.onload = function () {
     var nameInput = document.getElementById('name');
-    var surnameInput = document.getElementById('surname');
+    var lastNameInput = document.getElementById('last-name');
     var dniInput = document.getElementById('dni');
-    var birthdayInput = document.getElementById('birthdate');
+    var dob = document.getElementById('dob');
     var phoneInput = document.getElementById('phone');
     var addressInput = document.getElementById('address');
     var cityInput = document.getElementById('city');
-    var zipInput = document.getElementById('zipcode');
+    var zip = document.getElementById('zipcode');
     var emailInput = document.getElementById('email');
     var passInput = document.getElementById('password');
     var passInput2 = document.getElementById('password2');
@@ -53,22 +53,22 @@ window.onload = function () {
         messageAlert[0].classList.add('message-container');
     };
 
-    function validateSurname() {
-        if (surnameInput.value.length >= 3 && onlyAlpha(surnameInput)) {
+    function validateLastName() {
+        if (lastNameInput.value.length >= 3 && onlyAlpha(lastNameInput)) {
             messageAlert[1].classList.remove('invalid-field');
             messageAlert[1].classList.add('valid-field');
             messageAlert[1].innerHTML = "Valid";
             return true;
         } else {
             messageAlert[1].classList.add('invalid-field');
-            messageAlert[1].innerHTML = "Please, insert a valid surname";
+            messageAlert[1].innerHTML = "Please, insert a valid last name";
             return false;
         }
     };
-    surnameInput.onblur = function () {
-        validateSurname();
+    lastNameInput.onblur = function () {
+        validateLastName();
     };
-    surnameInput.onfocus = function () {
+    lastNameInput.onfocus = function () {
         messageAlert[1].classList.add('message-container');
     };
 
@@ -180,7 +180,7 @@ window.onload = function () {
     };
 
     function validateZip() {
-        if (zipInput.value.length >= 4 && zipInput.value.length <= 5 && onlyNum(zipInput) == true) {
+        if (zip.value.length >= 4 && zip.value.length <= 5 && onlyNum(zip) == true) {
             messageAlert[7].classList.remove('invalid-field');
             messageAlert[7].classList.add('valid-field');
             messageAlert[7].innerHTML = "Valid";
@@ -191,10 +191,10 @@ window.onload = function () {
             return false;
         }
     };
-    zipInput.onblur = function () {
+    zip.onblur = function () {
         validateZip();
     };
-    zipInput.onfocus = function () {
+    zip.onfocus = function () {
         messageAlert[7].classList.add('message-container');
     };
 
@@ -237,7 +237,7 @@ window.onload = function () {
     };
 
     function validatePassword2() {
-        if (!passInput2.value.match(passInput)) {
+        if (passInput2.value !== passInput.value) {
             messageAlert[10].classList.add('invalid-field');
             messageAlert[10].innerHTML = 'The passwords do not match';
             return false;
@@ -255,7 +255,7 @@ window.onload = function () {
         messageAlert[10].classList.add('message-container');
     };
 
-    function showValuesSignUp () {
+/*     function showValuesSignUp () {
         if (validateName() == true && 
             validateSurname() == true && 
             validateDni() == true && 
@@ -286,5 +286,76 @@ window.onload = function () {
     btnSignUp[0].onclick = function (e) {
         e.preventDefault();
         showValuesSignUp();
+    }; */
+
+    btnSignUp[0].onclick = function (showValuesSignUp) {
+        showValuesSignUp.preventDefault();
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nameInput.value +
+        '&lastname=' + lastNameInput.value + '&dni=' + dniInput.value + '&dob=' + dob.value +
+        '&phone=' + phoneInput.value + '&address=' + addressInput.value + '&city=' + cityInput.value +
+        '&zipcode=' + zip.value + '&email=' + emailInput.value + '&password=' + passInput.value +
+        '&password2=' + passInput2.value;
+        if (validateName(nameInput.value) == false) {
+            alert('Insert a valid name')
+        } else if (validateLastName(lastNameInput.value) == false) {
+            alert('Insert a valid last name')
+        } else if (validateDni(dniInput.value) == false) {
+            alert('Insert a valid DNI')
+        } else if (validatePhone(phoneInput.value) == false) {
+            alert('Insert a valid phone number')
+        } else if (validateAddress(addressInput.value) == false) {
+            alert('Insert a valid address')
+        } else if (validateCity(cityInput.value) == false) {
+            alert('Insert a valid city')
+        } else if (validateZip(zip.value) == false) {
+            alert('Insert a valid zip code')
+        } else if (validateEmail(emailInput.value) == false) {
+            alert('Insert a valid e-mail')
+        } else if (validatePassword(passInput.value) == false) {
+            alert('Insert a valid password')
+        } else if (validatePassword2(passInput2.value) == false) {
+            alert('Passwords do not match')
+        } else if (validateName(nameInput.value) == true && 
+            validateLastName(lastNameInput.value) == true && 
+            validateDni(dniInput.value) == true && 
+            validatePhone(phoneInput.value) == true && 
+            validateAddress(addressInput.value) == true && 
+            validateCity(cityInput.value) == true && 
+            validateZip(zip.value) == true && 
+            validateEmail(emailInput.value) == true && 
+            validatePassword(passInput.value) == true && 
+            validatePassword2(passInput2.value) == true
+            ) { 
+                fetch (url)
+                .then (function(response) {
+                    return response.json()
+                })
+                .then(function (jsonResponse) {
+                    if (jsonResponse.success) {
+                        alert('The request was successful: '+ jsonResponse.msg)
+                    } else {
+                    throw jsonResponse
+                    }
+                })
+                .catch(function(err) {
+                    alert(err.message)
+                })
+
+
+                    /* validateForm[0].classList.remove('hidden-info');
+                    validateValue[0].innerHTML = nameInput.value;
+                    validateValue[1].innerHTML = surnameInput.value;
+                    validateValue[2].innerHTML = dniInput.value;
+                    validateValue[3].innerHTML = birthdayInput.value;
+                    validateValue[4].innerHTML = phoneInput.value;
+                    validateValue[5].innerHTML = addressInput.value;
+                    validateValue[6].innerHTML = cityInput.value;
+                    validateValue[7].innerHTML = zipInput.value;
+                    validateValue[8].innerHTML = emailInput.value;
+                    validateValue[9].innerHTML = passInput.value;
+                    validateValue[10].innerHTML = passInput2.value; */
+        } else {
+            alert('Error');
+        }
     };
 }
