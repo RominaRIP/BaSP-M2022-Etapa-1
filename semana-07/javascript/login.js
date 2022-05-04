@@ -43,26 +43,6 @@ window.onload = function () {
         messageAlert[1].classList.add('message-container');
     };
 
- ///////////////////////////
-
-/*     function encodeQuery(data){
-        var query = data.url
-        for (var d in data.params)
-            query += encodeURIComponent(d) + '=' + encodeURIComponent(data.params[d]) + '&';
-            return query.slice(0, -1)
-    }
-    data = { 
-        url : 'https://basp-m2022-api-rest-server.herokuapp.com/login/',
-        params : {
-            'email': emailInput.value,
-            'password': passInput.value
-        }
-    }
-    queryParam = encodeQuery(data)
-    console.log(queryParam) */
-
-    
-
     btnLogin[0].onclick = function (showValues) {
         showValues.preventDefault();
         if (validateEmail(emailInput.value) === false) {

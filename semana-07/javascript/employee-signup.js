@@ -1,6 +1,6 @@
 window.onload = function () {
     var nameInput = document.getElementById('name');
-    var lastNameInput = document.getElementById('last-name');
+    var lastName = document.getElementById('last-name');
     var dniInput = document.getElementById('dni');
     var dob = document.getElementById('dob');
     var phoneInput = document.getElementById('phone');
@@ -54,7 +54,7 @@ window.onload = function () {
     };
 
     function validateLastName() {
-        if (lastNameInput.value.length >= 3 && onlyAlpha(lastNameInput)) {
+        if (lastName.value.length >= 3 && onlyAlpha(lastName)) {
             messageAlert[1].classList.remove('invalid-field');
             messageAlert[1].classList.add('valid-field');
             messageAlert[1].innerHTML = "Valid";
@@ -65,10 +65,10 @@ window.onload = function () {
             return false;
         }
     };
-    lastNameInput.onblur = function () {
+    lastName.onblur = function () {
         validateLastName();
     };
-    lastNameInput.onfocus = function () {
+    lastName.onfocus = function () {
         messageAlert[1].classList.add('message-container');
     };
 
@@ -107,6 +107,36 @@ window.onload = function () {
     };
     dniInput.onfocus = function () {
         messageAlert[2].classList.add('message-container');
+    };
+
+    function validateDob() {
+        var day = Number(dob.value.split('/')[1]);
+        var month = Number(dob.value.split('/')[0]);
+        var year = Number(dob.value.split('/')[2]);
+        if (year < 1900 || year > 2004) {
+            messageAlert[3].classList.add('invalid-field');
+            messageAlert[3].innerHTML = "Please, insert a valid year";
+            return false;
+        } else if (month > 12 || month < 1) {
+            messageAlert[3].classList.add('invalid-field');
+            messageAlert[3].innerHTML = "Please, insert a valid month";
+            return false;
+        } else if (day > 31 || day < 1) {
+            messageAlert[3].classList.add('invalid-field');
+            messageAlert[3].innerHTML = "Please, insert a valid day";
+            return false;
+        } else {
+            messageAlert[3].classList.remove('invalid-field');
+            messageAlert[3].classList.add('valid-field');
+            messageAlert[3].innerHTML = "Valid";
+            return true;
+        }
+    };
+    dob.onblur = function () {
+        validateDob();
+    };
+    dob.onfocus = function () {
+        messageAlert[3].classList.add('message-container');
     };
 
     function validatePhone() {
@@ -255,52 +285,23 @@ window.onload = function () {
         messageAlert[10].classList.add('message-container');
     };
 
-/*     function showValuesSignUp () {
-        if (validateName() == true && 
-            validateSurname() == true && 
-            validateDni() == true && 
-            validatePhone() == true && 
-            validateAddress() == true && 
-            validateCity() == true && 
-            validateZip() == true && 
-            validateEmail() == true && 
-            validatePassword() == true && 
-            validatePassword2() == true
-            ) {
-            validateForm[0].classList.remove('hidden-info');
-            validateValue[0].innerHTML = nameInput.value;
-            validateValue[1].innerHTML = surnameInput.value;
-            validateValue[2].innerHTML = dniInput.value;
-            validateValue[3].innerHTML = birthdayInput.value;
-            validateValue[4].innerHTML = phoneInput.value;
-            validateValue[5].innerHTML = addressInput.value;
-            validateValue[6].innerHTML = cityInput.value;
-            validateValue[7].innerHTML = zipInput.value;
-            validateValue[8].innerHTML = emailInput.value;
-            validateValue[9].innerHTML = passInput.value;
-            validateValue[10].innerHTML = passInput2.value;
-        } else {
-            alert('error');
-        }
-    };
-    btnSignUp[0].onclick = function (e) {
-        e.preventDefault();
-        showValuesSignUp();
-    }; */
-
     btnSignUp[0].onclick = function (showValuesSignUp) {
         showValuesSignUp.preventDefault();
+        var formatDate = dob.value.split('/');
+        var newFormatDate = formatDate.slice(1, 2) + '/' + formatDate.slice(0, 1) + '/' + formatDate.slice(2);
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nameInput.value +
-        '&lastname=' + lastNameInput.value + '&dni=' + dniInput.value + '&dob=' + dob.value +
+        '&lastname=' + lastName.value + '&dni=' + dniInput.value + '&dob=' + newFormatDate.value +
         '&phone=' + phoneInput.value + '&address=' + addressInput.value + '&city=' + cityInput.value +
         '&zipcode=' + zip.value + '&email=' + emailInput.value + '&password=' + passInput.value +
         '&password2=' + passInput2.value;
         if (validateName(nameInput.value) == false) {
             alert('Insert a valid name')
-        } else if (validateLastName(lastNameInput.value) == false) {
+        } else if (validateLastName(lastName.value) == false) {
             alert('Insert a valid last name')
         } else if (validateDni(dniInput.value) == false) {
             alert('Insert a valid DNI')
+        } else if (validateDob(dob) == false) {
+            alert('Insert a valid birth date')
         } else if (validatePhone(phoneInput.value) == false) {
             alert('Insert a valid phone number')
         } else if (validateAddress(addressInput.value) == false) {
@@ -316,8 +317,9 @@ window.onload = function () {
         } else if (validatePassword2(passInput2.value) == false) {
             alert('Passwords do not match')
         } else if (validateName(nameInput.value) == true && 
-            validateLastName(lastNameInput.value) == true && 
+            validateLastName(lastName.value) == true && 
             validateDni(dniInput.value) == true && 
+            validateDob(dob) == true &&
             validatePhone(phoneInput.value) == true && 
             validateAddress(addressInput.value) == true && 
             validateCity(cityInput.value) == true && 
@@ -332,28 +334,39 @@ window.onload = function () {
                 })
                 .then(function (jsonResponse) {
                     if (jsonResponse.success) {
-                        alert('The request was successful: '+ jsonResponse.msg)
+                        alert('The request was successful: employee logged')
+
+                        localStorage.setItem("name", nameInput.value);
+                        localStorage.setItem("last-name", lastName.value);
+                        localStorage.setItem("dni", dniInput.value);
+                        localStorage.setItem("dob", dob.value);
+                        localStorage.setItem("phone", phoneInput.value);
+                        localStorage.setItem("address", addressInput.value);
+                        localStorage.setItem("city", cityInput.value);
+                        localStorage.setItem("zip", zip.value);
+                        localStorage.setItem("email", emailInput.value);
+                        localStorage.setItem("password", passInput.value);
+                        localStorage.setItem("password2", passInput2.value);
+
+                        /* validateForm[0].classList.remove('hidden-info');
+                        validateValue[0].innerHTML = nameInput.value;
+                        validateValue[1].innerHTML = surnameInput.value;
+                        validateValue[2].innerHTML = dniInput.value;
+                        validateValue[3].innerHTML = newFormatDate.value;
+                        validateValue[4].innerHTML = phoneInput.value;
+                        validateValue[5].innerHTML = addressInput.value;
+                        validateValue[6].innerHTML = cityInput.value;
+                        validateValue[7].innerHTML = zipInput.value;
+                        validateValue[8].innerHTML = emailInput.value;
+                        validateValue[9].innerHTML = passInput.value;
+                        validateValue[10].innerHTML = passInput2.value; */
                     } else {
-                    throw jsonResponse
+                    throw alert('The request failed: '+ jsonResponse)
                     }
                 })
                 .catch(function(err) {
                     alert(err.message)
                 })
-
-
-                    /* validateForm[0].classList.remove('hidden-info');
-                    validateValue[0].innerHTML = nameInput.value;
-                    validateValue[1].innerHTML = surnameInput.value;
-                    validateValue[2].innerHTML = dniInput.value;
-                    validateValue[3].innerHTML = birthdayInput.value;
-                    validateValue[4].innerHTML = phoneInput.value;
-                    validateValue[5].innerHTML = addressInput.value;
-                    validateValue[6].innerHTML = cityInput.value;
-                    validateValue[7].innerHTML = zipInput.value;
-                    validateValue[8].innerHTML = emailInput.value;
-                    validateValue[9].innerHTML = passInput.value;
-                    validateValue[10].innerHTML = passInput2.value; */
         } else {
             alert('Error');
         }
