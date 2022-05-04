@@ -13,8 +13,6 @@ window.onload = function () {
     var messageAlert = document.getElementsByClassName('message-container');
     var validEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     var btnSignUp = document.getElementsByClassName('btn-signup');
-    var validateForm = document.getElementsByClassName('hidden-info');
-    var validateValue = document.getElementsByClassName('inner-span');
 
     function onlyAlpha (alphaInput) {
         var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -110,9 +108,9 @@ window.onload = function () {
     };
 
     function validateDob() {
-        var day = Number(dob.value.split('/')[1]);
-        var month = Number(dob.value.split('/')[0]);
-        var year = Number(dob.value.split('/')[2]);
+        var day = Number(dob.value.split('-')[2]);
+        var month = Number(dob.value.split('-')[1]);
+        var year = Number(dob.value.split('-')[0]);
         if (year < 1900 || year > 2004) {
             messageAlert[3].classList.add('invalid-field');
             messageAlert[3].innerHTML = "Please, insert a valid year";
@@ -138,6 +136,7 @@ window.onload = function () {
     dob.onfocus = function () {
         messageAlert[3].classList.add('message-container');
     };
+    console.log(dob.value)
 
     function validatePhone() {
         if (phoneInput.value.length >= 10 && onlyNum(phoneInput) == true) {
@@ -287,55 +286,59 @@ window.onload = function () {
 
     btnSignUp[0].onclick = function (showValuesSignUp) {
         showValuesSignUp.preventDefault();
-        var formatDate = dob.value.split('/');
-        var newFormatDate = formatDate.slice(1, 2) + '/' + formatDate.slice(0, 1) + '/' + formatDate.slice(2);
-        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nameInput.value +
-        '&lastname=' + lastName.value + '&dni=' + dniInput.value + '&dob=' + newFormatDate.value +
-        '&phone=' + phoneInput.value + '&address=' + addressInput.value + '&city=' + cityInput.value +
-        '&zipcode=' + zip.value + '&email=' + emailInput.value + '&password=' + passInput.value +
-        '&password2=' + passInput2.value;
-        if (validateName(nameInput.value) == false) {
+        var formatDate = dob.value.split('-');
+        var newFormatDate = formatDate.slice(1, 2) + '/' + formatDate.slice(2) + '/' + formatDate.slice(0, 1);
+        console.log(newFormatDate.value)
+        if (validateName() == false) {
             alert('Insert a valid name')
-        } else if (validateLastName(lastName.value) == false) {
+        } else if (validateLastName() == false) {
             alert('Insert a valid last name')
-        } else if (validateDni(dniInput.value) == false) {
+        } else if (validateDni() == false) {
             alert('Insert a valid DNI')
-        } else if (validateDob(dob) == false) {
+        } else if (validateDob() == false) {
             alert('Insert a valid birth date')
-        } else if (validatePhone(phoneInput.value) == false) {
+        } else if (validatePhone() == false) {
             alert('Insert a valid phone number')
-        } else if (validateAddress(addressInput.value) == false) {
+        } else if (validateAddress() == false) {
             alert('Insert a valid address')
-        } else if (validateCity(cityInput.value) == false) {
+        } else if (validateCity() == false) {
             alert('Insert a valid city')
-        } else if (validateZip(zip.value) == false) {
+        } else if (validateZip() == false) {
             alert('Insert a valid zip code')
-        } else if (validateEmail(emailInput.value) == false) {
+        } else if (validateEmail() == false) {
             alert('Insert a valid e-mail')
-        } else if (validatePassword(passInput.value) == false) {
+        } else if (validatePassword() == false) {
             alert('Insert a valid password')
-        } else if (validatePassword2(passInput2.value) == false) {
+        } else if (validatePassword2() == false) {
             alert('Passwords do not match')
-        } else if (validateName(nameInput.value) == true && 
-            validateLastName(lastName.value) == true && 
-            validateDni(dniInput.value) == true && 
-            validateDob(dob) == true &&
-            validatePhone(phoneInput.value) == true && 
-            validateAddress(addressInput.value) == true && 
-            validateCity(cityInput.value) == true && 
-            validateZip(zip.value) == true && 
-            validateEmail(emailInput.value) == true && 
-            validatePassword(passInput.value) == true && 
-            validatePassword2(passInput2.value) == true
-            ) { 
-                fetch (url)
+        } else if (validateName() == true && 
+            validateLastName() == true && 
+            validateDni() == true && 
+            validateDob() == true &&
+            validatePhone() == true && 
+            validateAddress() == true && 
+            validateCity() == true && 
+            validateZip() == true && 
+            validateEmail() == true && 
+            validatePassword() == true && 
+            validatePassword2() == true
+            ) {
+                var urlData = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nameInput.value +
+                '&lastname=' + lastName.value + '&dni=' + dniInput.value + '&dob=' + newFormatDate.value +
+                '&phone=' + phoneInput.value + '&address=' + addressInput.value + '&city=' + cityInput.value +
+                '&zipcode=' + zip.value + '&email=' + emailInput.value + '&password=' + passInput.value +
+                '&password2=' + passInput2.value;
+                fetch (urlData)
                 .then (function(response) {
                     return response.json()
                 })
                 .then(function (jsonResponse) {
                     if (jsonResponse.success) {
-                        alert('The request was successful: employee logged')
-
+                        alert('The request was successful: employee logged. ' + 'Name: ' + nameInput.value +
+                        'Last name: ' + lastName.value + 'DNI: ' + dniInput.value + 'Birth date: ' +
+                        newFormatDate.value + 'Phone: ' + phoneInput.value + 'Address: ' + addressInput.value +
+                        'City: ' + cityInput.value + 'Zip code: ' + zip.value + 'E-mail: ' + emailInput.value +
+                        'Password: ' + passInput.value + 'Password 2: ' + passInput2.value)
                         localStorage.setItem("name", nameInput.value);
                         localStorage.setItem("last-name", lastName.value);
                         localStorage.setItem("dni", dniInput.value);
@@ -347,19 +350,6 @@ window.onload = function () {
                         localStorage.setItem("email", emailInput.value);
                         localStorage.setItem("password", passInput.value);
                         localStorage.setItem("password2", passInput2.value);
-
-                        /* validateForm[0].classList.remove('hidden-info');
-                        validateValue[0].innerHTML = nameInput.value;
-                        validateValue[1].innerHTML = surnameInput.value;
-                        validateValue[2].innerHTML = dniInput.value;
-                        validateValue[3].innerHTML = newFormatDate.value;
-                        validateValue[4].innerHTML = phoneInput.value;
-                        validateValue[5].innerHTML = addressInput.value;
-                        validateValue[6].innerHTML = cityInput.value;
-                        validateValue[7].innerHTML = zipInput.value;
-                        validateValue[8].innerHTML = emailInput.value;
-                        validateValue[9].innerHTML = passInput.value;
-                        validateValue[10].innerHTML = passInput2.value; */
                     } else {
                     throw alert('The request failed: '+ jsonResponse)
                     }
