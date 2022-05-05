@@ -288,7 +288,7 @@ window.onload = function () {
         showValuesSignUp.preventDefault();
         var formatDate = dob.value.split('-');
         var newFormatDate = formatDate.slice(1, 2) + '/' + formatDate.slice(2) + '/' + formatDate.slice(0, 1);
-        console.log(newFormatDate.value)
+        console.log(newFormatDate)
         if (validateName() == false) {
             alert('Insert a valid name')
         } else if (validateLastName() == false) {
@@ -323,10 +323,17 @@ window.onload = function () {
             validatePassword() == true && 
             validatePassword2() == true
             ) {
-                var urlData = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' + '?name=' + nameInput.value +
-                '&lastname=' + lastName.value + '&dni=' + dniInput.value + '&dob=' + newFormatDate.value +
-                '&phone=' + phoneInput.value + '&address=' + addressInput.value + '&city=' + cityInput.value +
-                '&zipcode=' + zip.value + '&email=' + emailInput.value + '&password=' + passInput.value +
+                var urlData = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' +
+                '?name=' + nameInput.value +
+                '&lastName=' + lastName.value +
+                '&dni=' + dniInput.value +
+                '&dob=' + newFormatDate +
+                '&phone=' + phoneInput.value +
+                '&address=' + addressInput.value +
+                '&city=' + cityInput.value +
+                '&zip=' + zip.value +
+                '&email=' + emailInput.value +
+                '&password=' + passInput.value +
                 '&password2=' + passInput2.value;
                 fetch (urlData)
                 .then (function(response) {
@@ -334,11 +341,18 @@ window.onload = function () {
                 })
                 .then(function (jsonResponse) {
                     if (jsonResponse.success) {
-                        alert('The request was successful: employee logged. ' + 'Name: ' + nameInput.value +
-                        'Last name: ' + lastName.value + 'DNI: ' + dniInput.value + 'Birth date: ' +
-                        newFormatDate.value + 'Phone: ' + phoneInput.value + 'Address: ' + addressInput.value +
-                        'City: ' + cityInput.value + 'Zip code: ' + zip.value + 'E-mail: ' + emailInput.value +
-                        'Password: ' + passInput.value + 'Password 2: ' + passInput2.value)
+                        alert('The request was successful: employee logged. ' + 
+                        'Name: ' + nameInput.value +
+                        '; Last name: ' + lastName.value + 
+                        '; DNI: ' + dniInput.value + 
+                        '; Birth date: ' + newFormatDate + 
+                        '; Phone: ' + phoneInput.value + 
+                        '; Address: ' + addressInput.value +
+                        '; City: ' + cityInput.value + 
+                        '; Zip code: ' + zip.value + 
+                        '; E-mail: ' + emailInput.value +
+                        '; Password: ' + passInput.value + 
+                        '; Password 2: ' + passInput2.value)
                         localStorage.setItem("name", nameInput.value);
                         localStorage.setItem("last-name", lastName.value);
                         localStorage.setItem("dni", dniInput.value);
@@ -354,8 +368,8 @@ window.onload = function () {
                     throw alert('The request failed: '+ jsonResponse)
                     }
                 })
-                .catch(function(err) {
-                    alert(err.message)
+                .catch(function(error) {
+                    alert(error.message)
                 })
         } else {
             alert('Error');
